@@ -13,6 +13,13 @@ impl Ray {
         }
     }
 
+    pub fn zero() -> Ray {
+        Ray {
+            origin: Point3::zero(),
+            direction: Vec3::zero()
+        }
+    }
+
     pub fn at(&self, t: f32) -> Vec3 {
         self.origin + t * self.direction
     }
